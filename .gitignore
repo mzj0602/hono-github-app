@@ -51,4 +51,6 @@ tmp
 temp
 .aws-sam
 .lambda-package
+lambda-package
+apps/server/lambda-package
 lambda-deploy.zip
