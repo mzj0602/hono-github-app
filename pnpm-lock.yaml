@@ -99,15 +99,24 @@ importers:
       '@hono/trpc-server':
         specifier: ^0.4.0
         version: 0.4.2(@trpc/server@11.12.0(typescript@5.9.3))(hono@4.12.8)
+      '@t3-oss/env-core':
+        specifier: ^0.13.10
+        version: 0.13.10(typescript@5.9.3)(zod@4.3.6)
       '@trpc/server':
         specifier: 'catalog:'
         version: 11.12.0(typescript@5.9.3)
       dotenv:
         specifier: 'catalog:'
         version: 17.3.1
+      drizzle-orm:
+        specifier: 'catalog:'
+        version: 0.45.1(@types/pg@8.18.0)(pg@8.20.0)
       hono:
         specifier: 'catalog:'
         version: 4.12.8
+      pg:
+        specifier: ^8.17.1
+        version: 8.20.0
       zod:
         specifier: 'catalog:'
         version: 4.3.6

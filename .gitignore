@@ -49,3 +49,6 @@ coverage
 .cache
 tmp
 temp
+.aws-sam
+.lambda-package
+lambda-deploy.zip

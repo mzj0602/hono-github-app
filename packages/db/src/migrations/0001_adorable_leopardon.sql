@@ -1,0 +1,1 @@
+ALTER TABLE "github_profiles" ALTER COLUMN "github_id" SET DATA TYPE bigint;

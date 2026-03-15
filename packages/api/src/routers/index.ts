@@ -1,10 +1,10 @@
 import { publicProcedure, router } from "../index";
-import { todoRouter } from "./todo";
+import { githubRouter } from "./github";
 
 export const appRouter = router({
   healthCheck: publicProcedure.query(() => {
     return "OK";
   }),
-  todo: todoRouter,
+  github: githubRouter,
 });
 export type AppRouter = typeof appRouter;

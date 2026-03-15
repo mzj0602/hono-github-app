@@ -3,10 +3,12 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsdown",
+    "build": "pnpm exec tsdown",
     "check-types": "tsc -b",
     "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
-    "dev": "tsx watch src/index.ts",
+    "dev": "node --import tsx src/index.ts",
+    "dev:watch": "tsx watch src/index.ts",
+    "package:lambda": "pnpm run build && node ./scripts/package-lambda.mjs",
     "start": "node dist/index.mjs"
   },
   "dependencies": {
@@ -15,9 +17,12 @@
     "@hono-github-app/env": "workspace:*",
     "@hono/node-server": "^1.14.4",
     "@hono/trpc-server": "^0.4.0",
+    "@t3-oss/env-core": "^0.13.10",
+    "hono": "catalog:",
     "@trpc/server": "catalog:",
     "dotenv": "catalog:",
-    "hono": "catalog:",
+    "drizzle-orm": "catalog:",
+    "pg": "^8.17.1",
     "zod": "catalog:"
   },
   "devDependencies": {
