@@ -28,6 +28,7 @@
   "devDependencies": {
     "@hono-github-app/config": "workspace:*",
     "@types/node": "catalog:",
+    "@types/pg": "^8.15.6",
     "tsdown": "^0.16.5",
     "tsx": "^4.19.2",
     "typescript": "^5"
