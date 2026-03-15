@@ -50,6 +50,16 @@ jobs:
             exit 1
           fi
 
+      - name: Normalize deploy variables
+        run: |
+          {
+            echo "AWS_REGION=$(printf '%s' "$AWS_REGION" | xargs)"
+            echo "LAMBDA_FUNCTION_NAME=$(printf '%s' "$LAMBDA_FUNCTION_NAME" | xargs)"
+            echo "FRONTEND_BUCKET_NAME=$(printf '%s' "$FRONTEND_BUCKET_NAME" | xargs)"
+            echo "VITE_SERVER_URL=$(printf '%s' "$VITE_SERVER_URL" | xargs)"
+            echo "CLOUDFRONT_DISTRIBUTION_ID=$(printf '%s' "$CLOUDFRONT_DISTRIBUTION_ID" | xargs)"
+          } >> "$GITHUB_ENV"
+
       - name: Type check
         run: pnpm run check-types
 
